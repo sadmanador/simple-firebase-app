@@ -1,22 +1,19 @@
-import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 
-// TODO: Replace the following with your app's Firebase project configuration
+
 const firebaseConfig = {
-    //...
+  apiKey: "AIzaSyBXJvu1kG6CJcYAvAE4JR3OgZiyAGgNams",
+  authDomain: "first-firebase-app-c2297.firebaseapp.com",
+  projectId: "first-firebase-app-c2297",
+  storageBucket: "first-firebase-app-c2297.appspot.com",
+  messagingSenderId: "745394308940",
+  appId: "1:745394308940:web:092660ca52481fb9b631e9",
+  measurementId: "G-CFS66X49E0"
 };
 
+
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+const analytics = getAnalytics(app);
 
-// Get a list of cities from your database
-async function getCities(db) {
-    const citiesCol = collection(db, 'cities');
-    const citySnapshot = await getDocs(citiesCol);
-    const cityList = citySnapshot.docs.map(doc => doc.data());
-    return cityList;
-}
-
-export { app };
+export app;
