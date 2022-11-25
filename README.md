@@ -1,4 +1,5 @@
 ### steps
+0. firebase configuration copied from firebase to firebase/firebase.init.js
 1. src/app.js
 1-1.import googleAuthProvider, getAuth, singInWithPopup.
 1-2. getAuth(app) => "app" is from firebase.init.js.
@@ -7,6 +8,6 @@
 2. enable google sing-in-method. => console > build > authentication.
 3. btn + handler is added
 4. handler => signInWithPopup(auth, provider)
-5. .then(result => const user = result.user;
+4-1. .then(result => const user = result.user;
 console.log(user))
-6. .catch(error => console.error(error));
+4-2. .catch(error => console.error(error));
