@@ -11,3 +11,11 @@
 4-1. .then(result => const user = result.user;
 console.log(user))
 4-2. .catch(error => console.error(error));
+
+---------------------------------------------------------
+sign-in with github,facebook, twitter
+1. add sign-in-method
+2. github> developer settings > new app
+3. copy client id and secret git hub to firebase
+4. callback firebase to gitHub
+
